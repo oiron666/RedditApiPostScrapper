@@ -29,7 +29,7 @@ def set_limit():
     #defines the amount of posts to parse
     type_limit=input('Type limit (1000 max) \n')
     tl_int = int(type_limit)
-    while tl_int >= 1000:
+    while tl_int > 1000:
         type_limit=input('Type limit (1000 max) \n')
         tl_int = int(type_limit)
         print(tl_int)
@@ -89,4 +89,4 @@ with open(file_path, 'a') as file_to_write:
                     }
                 csv_writer.writerow(content)
                 time.sleep(2)
-print('Data Saved')
+print('Data saved as {file_path}'.format(file_path = file_path))
